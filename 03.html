@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>refactory tes</title>
+<script src=https://code.jquery.com/jquery-3.3.1.js></script>
+<script src=03.js></script>
+<script type='text/javascript'>
+$(document).ready(function(){
+    $('button[name=tambah]').click(function(){
+        var data = $('input[name=kodebarang]').val();
+        tambahItemKeCart(data);
+        $('#get table').append('<tr><td>'+cart[z].kode_produk+'</td><td>'+cart[z].nama_produk+'</td><td>'+cart[z].harga+'</td></tr>');
+        z=z+1;
+        $('#total').text(total());
+    })
+})
+</script>
+</head>
+<body>
+        <p>Kode Barang :<input type="text" name="kodebarang"></p>
+        <button name="tambah">tambah</button>
+<div id="get"><table border=1>
+    <tr>
+        <td>kode barang</td>
+        <td>nama barang</td>
+        <td>harga</td>
+    </tr>
+</table>
+</div>
+jumlah :<div id="total"></div>
+</body>
+</html>
